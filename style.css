@@ -1,0 +1,112 @@
+/* Master styles */ 
+body { 
+    margin: 0px; 
+}
+.container {
+    display: grid; 
+    grid-template-columns: 1fr; 
+}
+.nav-wrapper {
+    display: flex; 
+    justify-content: space-between; 
+    padding: 38px; 
+}
+
+.right-side {
+    display: flex;  
+}
+
+.nav-wrapper > .right-side > div {
+    margin-right: 20px; 
+    font-size: 0.9em; 
+    text-transform: uppercase; 
+}
+
+.nav-link-wrapper {
+    height: 22px; 
+    border-bottom: 1px solid transparent; 
+    transition: border-bottom 0.5s; 
+}
+
+.nav-link-wrapper a {
+    color: #8a8a8a; 
+    text-decoration: none; 
+    transition: color 0.5s; 
+}
+
+.nav-link-wrapper:hover {
+    border-bottom: 1px solid black; 
+}
+
+.nav-link-wrapper a:hover {
+   color:  black; 
+}
+
+/* Main Page Styles */ 
+
+.homepage-photos{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr; 
+  }
+
+
+img { 
+    height: 100%; 
+    width: 100%; 
+    object-fit: cover;
+}
+
+footer{
+    background-color: black;
+    color: white;
+    text-align: center;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    grid-column: 1 / -1;
+  }
+
+@media only screen and (max-width: 500px){
+    .homepage-photos{
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr; 
+    }
+}
+
+
+@media only screen and (min-width: 750px) and (max-width: 1000px){ 
+    .homepage-photos{
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr; 
+    }
+}
+
+/* About Section */
+
+.two-column-wrapper{
+    display: grid; 
+    grid-template-columns: 1fr 1fr; 
+}
+
+.profile-image-wrapper img {
+    /* width: 100%;  */
+}
+
+.profile-content-wrapper {
+    padding: 30px; 
+}
+
+.profile-content-wrapper h1 { 
+    color: rgb(13, 110, 139); 
+}
+
+/* Music Videos Section */
+
+.music-videos {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;  
+}
+
+
+/* Contact Form */
