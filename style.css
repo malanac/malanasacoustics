@@ -17,7 +17,17 @@
 /* Master styles  */
 body { 
     margin: 0px;
-    padding: 0px;  
+    padding: 0px; 
+    background-color: #fffceb;  
+}
+h1 {
+    text-align: center;
+    font-family: "Basic"; 
+    padding: 12px; 
+}
+
+p {
+    font-family: "Boker"
 }
 .container {
     display: grid; 
@@ -27,6 +37,7 @@ body {
     display: flex; 
     justify-content: space-between; 
     padding: 25px; 
+    font-weight: bold; 
 }
 .nav-link-wrapper a.current {
     border-bottom: 1px solid underline; 
@@ -65,6 +76,7 @@ body {
 .slogan {
     text-align: center;
     font-family: "Basic"; 
+    padding: 12px; 
 }
 
 .brand {
@@ -94,9 +106,25 @@ footer{
     padding-top: 20px;
     padding-bottom: 20px; 
     grid-column: 1 / -1;  
+    /* margin: 0 auto;  */
+    display: block; 
+    justify-content: flex-end;
+  }
+
+  #footer{
+    background-color: black;
+    color: white;
+    text-align: center;
+    padding-top: 20px;
+    padding-bottom: 20px; 
+    grid-column: 1 / -1;  
     margin: 0 auto; 
     display: block; 
     justify-content: flex-end;
+    position: fixed;
+    bottom: 0; 
+    left: 0; 
+    width: 100%
   }
 
 
@@ -124,31 +152,35 @@ footer{
 
 .profile-image-wrapper img {
     object-fit: cover;  
-    width: 100%;  
+    width: auto;
+    max-height: 65vh;
+    margin-bottom: 20px;
 }
+
 .center{
     display: block; 
     margin-left: auto; 
     margin-right: auto; 
-    width: 50%;
+    width: 50%; 
 }
 
 .profile-content-wrapper {
     padding: 30px; 
     grid-template-columns: 1fr 1fr;  
-    
 }
-/* .footer { */
-    /* grid-template-columns: 1/ span 2;  */
-/* } */
+
 .profile-content-wrapper h1 { 
     color: rgb(13, 110, 139); 
 }
 
 @media only screen and (max-width: 500px){
-    .homepage-photos{
+    .homepage-photos, .two-column-wrapper{
     grid-template-columns: 1fr;
     grid-template-rows: 1fr; 
+    }
+
+    .profile-image-wrapper img{
+            max-height: 50vh; 
     }
 }
 
@@ -167,6 +199,11 @@ footer{
     justify-content: space-between; 
 }
 
+video {
+    width: 100%;
+    height: auto;
+}
+
 @media only screen and (max-width: 500px){
     .music-videos{
     grid-template-columns: 1fr;
@@ -174,8 +211,13 @@ footer{
     }
 }
 
+video {
+    padding: 8px;
+}
+
 
 /* Contact Form */
+
 body {
     font-family: Arial, Helvetica, sans-serif;
   }

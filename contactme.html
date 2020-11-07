@@ -1,12 +1,15 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title> Page Title </title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href='https://fonts.googleapis.com/css?family=Bokor'>
 </head>
 <body>
+    <header> 
+        <div class="skip"><a href=#main>Skip to Main Content</a></div>
     <div class="container">
         <div class="nav-wrapper">
             <div class="right-side">
@@ -26,16 +29,15 @@
                         <a href="contactme.html" class="current">Contact Me</a>
                         </div>
 
-            </div> 
+        </div> 
                 
-
             <div class="left-side">
                 <div class="brand">
                     <img src="images/logos/MalanaAcoustics.png">
                 </div> 
             </div>
         </div>
-
+    <main id=main> 
      <form>
       <fieldset>
     <!-- <legend>Contact Form</legend> -->
@@ -54,12 +56,13 @@
         <label for="msg">Leave A Message</label>
         <textarea placeholder="Enter your message" id = "msg" name="mesg" required></textarea><br>
     
-        <input type="checkbox" checked="checked" name="remember" id = "cBox"> 
-        <label for ="cBox">Remember me</label>
+        <!-- <input type="checkbox" checked="checked" name="remember" id = "cBox">  -->
+        <!-- <label for ="cBox">Remember me</label> -->
     
         <input type="submit" value = "Contact Me">
       </fieldset>
      </form>
+    </main>
      <footer>
         <p>Malana's Acoustics <br/>
           &copy; Malana Chan - Web Design 2020</p>
