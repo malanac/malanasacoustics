@@ -71,7 +71,7 @@ p {
 
 .nav-link-wrapper a:hover {
    color:  black; 
-}
+}   
 
 .slogan {
     text-align: center;
@@ -145,6 +145,22 @@ footer{
 
 /* About Section */
 
+a:link {
+  text-decoration: none; 
+}
+
+a:visited {
+  text-decoration: none;  
+}
+
+a:hover{
+  text-decoration: underline; 
+}
+
+a: active { 
+  text-decoration: underline; 
+}
+
 .two-column-wrapper{
     display: grid; 
     grid-template-columns: 1fr 1fr; 
@@ -193,6 +209,41 @@ footer{
     
 }
 
+.button {
+  background-color: rgb(153, 114, 153); 
+  border: none; 
+  color: white; 
+  padding: 16px 32px; 
+  text-align: center; 
+  text-decoration: none; 
+  display: inline-block; 
+  font-size: 16px; 
+  margin: 4px 2px; 
+  width: 50%; 
+  transition-duration: 0.4s; 
+  cursor: pointer; 
+}
+
+.button:hover {
+  background-color: white; 
+  color: rgb(153, 114, 153); 
+  border: 5px solid rgb(153, 114, 153); 
+}
+
+.contain:hover .overlay {
+  opacity: 1; 
+} 
+
+.image { 
+  display: block; 
+  width: 100%; 
+  height: auto; 
+}
+
+.contain{ 
+  position: relative; 
+  width: 100%; 
+}
 
 .songs{
     display: grid; 
@@ -214,7 +265,30 @@ video {
 video {
     padding: 8px;
 }
+.overlay {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  width: 100%;
+  opacity: 0;
+  transition: .5s ease;
+  background-color: rgb(153, 114, 153);
+}
 
+.text {
+  color: white;
+  font-size: 20px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
 
 /* Contact Form */
 
