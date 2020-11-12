@@ -157,7 +157,7 @@ a:hover{
   text-decoration: underline; 
 }
 
-a: active { 
+a:active { 
   text-decoration: underline; 
 }
 
@@ -233,6 +233,14 @@ a: active {
 .contain:hover .overlay {
   opacity: 1; 
 } 
+
+.contain:focus .overlay {
+  opacity: 1; 
+} 
+
+*:focus{
+  border: 1px solid;
+}
 
 .image { 
   display: block; 
