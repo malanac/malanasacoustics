@@ -44,7 +44,8 @@ p {
     text-decoration: underline;  
 }
 .right-side {
-    display: flex;  
+    display: flex;
+    flex-direction: column;  
 }
 
 .nav-wrapper > .right-side > div {
@@ -77,7 +78,7 @@ p {
     text-align: center;
     font-family: "Basic"; 
     padding: 12px; 
-}
+} 
 
 .brand {
     max-width: 100%; 
@@ -127,7 +128,7 @@ footer{
     width: 100%
   }
 
-
+/* Home Page Mobile View */
 @media only screen and (max-width: 500px){
     .homepage-photos{
     grid-template-columns: 1fr;
@@ -135,12 +136,23 @@ footer{
     }
 }
 
-
+/* Home Page Tablet View */
 @media only screen and (min-width: 750px) and (max-width: 1000px){ 
     .homepage-photos{
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr 1fr 1fr 1fr 1fr; 
     }
+}
+/* Home Page Desktop View */
+@media only screen and (min-width: 1200px){ 
+  /* .homepage-photos{ */
+  /* grid-template-columns: 1fr 1fr; */
+  /* grid-template-rows: 1fr 1fr 1fr 1fr 1fr;  */
+  /* } */
+  .right-side {
+    display: flex;
+    flex-direction: row;  
+}
 }
 
 /* About Section */
@@ -186,21 +198,44 @@ a:active {
 }
 
 .profile-content-wrapper h1 { 
-    color: rgb(13, 110, 139); 
-}
-
-@media only screen and (max-width: 500px){
-    .homepage-photos, .two-column-wrapper{
-    grid-template-columns: 1fr;
-    grid-template-rows: 1fr; 
+    color: rgb(13, 110, 139);
+      position: relative;
+      font-family: sans-serif;
+      text-transform: uppercase;
+      font-size: 2em;
+      letter-spacing: 4px;
+      overflow: hidden;
+      background: linear-gradient(90deg, rgb(13,110,139), #6D375D, rgb(13,110,139));
+      background-repeat: no-repeat;
+      background-size: 80%;
+      animation: animate 6s linear infinite;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: rgba(255, 255, 255, 0);
     }
+    
+    @keyframes animate {
+      0% {
+        background-position: -500%;
+      }
+      100% {
+        background-position: 500%;
+      }
+    } 
+    @media screen and (prefers-reduced-motion: reduce) {
+      .profile-content-wrapper h1 {animation:none;}
+    }
+/* About Page Mobile View */ 
+@media only screen and (max-width: 500px){ 
+  .homepage-photos, .two-column-wrapper{ 
+  grid-template-columns: 1fr; 
+  grid-template-rows: 1fr;  
+  } 
 
     .profile-image-wrapper img{
             max-height: 50vh; 
     }
 }
 
-/* Music Videos Section */
 
 .music-videos {
     display: grid;
@@ -209,8 +244,8 @@ a:active {
     
 }
 
-.button {
-  background-color: rgb(153, 114, 153); 
+.button { 
+  background-color: rgb(136, 76, 136); 
   border: none; 
   color: white; 
   padding: 16px 32px; 
@@ -230,8 +265,15 @@ a:active {
   border: 5px solid rgb(153, 114, 153); 
 }
 
+@media screen and (prefers-reduced-motion: reduce) {
+  .button:hover {animation:none;}
+}
+/* not working at the moment */
+
 .contain:hover .overlay {
   opacity: 1; 
+  transform: rotateX(360deg); 
+  /* this needs work please help */
 } 
 
 .contain:focus .overlay {
@@ -244,13 +286,14 @@ a:active {
 
 .image { 
   display: block; 
-  width: 100%; 
-  height: auto; 
+  width: 100%;  
+  height: 100%; 
 }
 
 .contain{ 
   position: relative; 
   width: 100%; 
+  height: auto; 
 }
 
 .songs{
@@ -370,6 +413,7 @@ body {
   #contacttitle {
       text-align: center; 
   }
+
   
   /* Change styles for span and cancel button on extra small screens */
   @media screen and (min-width: 770px) {
@@ -392,3 +436,11 @@ body {
       vertical-align:top;
    }
   }
+
+  /* .parallax{
+    background-image: url("images/images.jpg");
+    background-attachment: fixed; 
+    background-position: center; 
+    background-repeat: no-repeat;
+    background-size: cover; 
+  } */

@@ -1,71 +1,70 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title> Page Title </title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href='https://fonts.googleapis.com/css?family=Bokor'>
+	<!-- Global site tag (gtag.js) - Google Analytics -->
+
+	<script async src="https://www.googletagmanager.com/gtag/js?id=G-XJ27TBC26G">
+	</script>
+	<script>
+	    window.dataLayer = window.dataLayer || [];
+	    function gtag(){dataLayer.push(arguments);}
+	    gtag('js', new Date());
+
+	    gtag('config', 'G-XJ27TBC26G');
+	</script>
+	<meta charset="utf-8">
+	<meta content="width=device-width, initial-scale=1.0" name="viewport">
+	<title>Contact Me</title>
+	<link href="style.css" rel="stylesheet">
+	<link href='https://fonts.googleapis.com/css?family=Bokor' rel="stylesheet">
 </head>
 <body>
-    <header> 
-        <div class="skip"><a href=#main>Skip to Main Content</a></div>
-    <div class="container">
-        <div class="nav-wrapper">
-            <div class="right-side">
-                <div class="nav-link-wrapper">
-                    <a href="index.html">Home</a>
-                </div>
-
-                <div class="nav-link-wrapper">
-                    <a href="about.html">About</a>
-                </div>
-
-                    <div class="nav-link-wrapper">
-                        <a href="musicvideos.html">Videos</a>
-                    </div>
-
-                        <div class="nav-link-wrapper">
-                        <a href="contactme.html" class="current">Contact Me</a>
-                        </div>
-
-        </div> 
-                
-            <div class="left-side">
-                <div class="brand">
-                    <img src="images/logos/MalanaAcoustics.png">
-                </div> 
-            </div>
-        </div>
-    <main id=main> 
-     <form>
-      <fieldset>
-    <!-- <legend>Contact Form</legend> -->
-        <h1 id="contacttitle"> Contact me for any questions, song requests, or collaborations!</h1>
-        <label for="name_id">Name</label>
-        <input type="text" placeholder="Enter Your Name" id = "name_id" name="name" required>
-    
-        <label for="email_id">Email</label>
-        <input type="email" placeholder="Enter Your Email" id = "email_id" name="email" required>
-    
-        <label for="phone_id">Phone Number</label>
-        <input type="tel" name="phone" placeholder="123-456-7890" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" required>
-        <div><span>Format: 123-456-7890</span></div>
-    
-    
-        <label for="msg">Leave A Message</label>
-        <textarea placeholder="Enter your message" id = "msg" name="mesg" required></textarea><br>
-    
-        <!-- <input type="checkbox" checked="checked" name="remember" id = "cBox">  -->
-        <!-- <label for ="cBox">Remember me</label> -->
-    
-        <input type="submit" value = "Contact Me">
-      </fieldset>
-     </form>
-    </main>
-     <footer>
-        <p>Malana's Acoustics <br/>
-          &copy; Malana Chan - Web Design 2020</p>
-      </footer>
-    </body>
-    </html>
+	<header>
+		<div class="skip">
+			<a href="#main">Skip to Main Content</a>
+		</div>
+		<div class="container">
+			<div class="nav-wrapper">
+				<div class="right-side">
+					<div class="nav-link-wrapper">
+						<a href="index.html">Home</a>
+					</div>
+					<div class="nav-link-wrapper">
+						<a href="about.html">About</a>
+					</div>
+					<div class="nav-link-wrapper">
+						<a href="musicvideos.html">Videos</a>
+					</div>
+					<div class="nav-link-wrapper">
+						<a class="current" href="contactme.html">Contact Me</a>
+					</div>
+				</div>
+				<div class="left-side">
+					<div class="brand"><img alt="Malana's Acoustics Logo" src="images/logos/MalanaAcoustics.png"></div>
+				</div>
+			</div>
+			<main id="main">
+				<form action="https://formspree.io/f/mnqovalv" method="post">
+					<fieldset>
+						<div class="parallax">
+							<!-- <legend>Contact Form</legend> -->
+							<h1 id="contacttitle">Contact me for any questions, song requests, or collaborations!</h1><label for="name_id">Name</label> <input id="name_id" name="name" placeholder="Enter Your Name" required="" type="text"> <label for="email_id">Email</label> <input id="email_id" name="email" placeholder="Enter Your Email" required="" type="email"> <label for="phone_id">Phone Number</label> <input id="phone_id" name="phone" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" placeholder="123-456-7890" required="" type="tel">
+							<div>
+								<span>Format: 123-456-7890</span>
+							</div><label for="msg">Leave A Message</label> 
+							<textarea id="msg" name="mesg" placeholder="Enter your message" required=""></textarea><br>
+							<!-- <input type="checkbox" checked="checked" name="remember" id = "cBox">  -->
+							 <!-- <label for ="cBox">Remember me</label> -->
+							 <input type="submit" value="Contact Me">
+						</div>
+					</fieldset>
+				</form>
+			</main>
+			<footer>
+				<p>Malana's Acoustics<br>
+				&copy; Malana Chan - Web Design 2020</p>
+			</footer>
+		</div>
+	</header>
+</body>
+</html>
